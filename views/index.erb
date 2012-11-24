@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>立委 avatar</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <style>
+        .media-object {
+            width: 57px;
+            height: 57px;
+            border: 1px solid #b9b9b9;
+            padding: 1px;
+        }
+    </style>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<%
+  @members = ["陳唐山 ","陳學聖 ","陳雪生 ","陳歐珀 ","邱議瑩 ","陳根德 ","丁守中 ","高金素梅 ","許忠信 ","許智傑 ","黃志雄 ","黃偉哲 ","黃文玲 ","黃昭順 ","洪秀柱 ","蔣乃辛 ","簡東明 ","孔文吉 ","廖國棟 ","林正二 ","林鴻池 ","林世嘉 ","盧秀燕 ","劉建國 ","劉櫂豪 ","李鴻鈞 ","羅淑蕾 ","潘孟安 ","蘇震清 ","蔡其昌 ","田秋堇 ","蔡煌瑯 ","吳育昇 ","王廷升 ","王金平 ","許添財 ","楊麗環 ","顏清標 ","張曉風 ","何欣純 ","吳宜臻 ","吳秉叡 ","吳育仁 ","呂學樟 ","呂玉玲 ","姚文智 ","孫大千 ","尤美女 ","廖正井 ","張嘉郡 ","張慶忠 ","徐少萍 ","徐欣瑩 ","徐耀昌 ","曾巨威 ","李俊俋 ","李慶華 ","李應元 ","李昆澤 ","李桐豪 ","林佳龍 ","林國正 ","林岱樺 ","林德福 ","林明溱 ","林淑芬 ","林滄敏 ","林郁方 ","柯建銘 ","楊曜 ","楊玉欣 ","楊瓊瓔 ","段宜康 ","江啟臣 ","江惠貞 ","潘維剛 ","王惠美 ","王育敏 ","王進士 ","盧嘉辰 ","管碧玲 ","紀國棟 ","羅明才 ","翁重鈞 ","葉宜津 ","蔡正元 ","蔡錦隆 ","蕭美琴 ","薛凌 ","謝國樑 ","費鴻泰 ","赖士葆 ","趙天麟 ","邱志偉 ","邱文彥 ","鄭天財 ","鄭汝芬 ","鄭麗君 ","陳亭妃 ","陳其邁 ","陳明文 ","陳節如 ","陳超明 ","陳鎮湘 ","馬文君 ","高志鵬 ","魏明谷"]
+%>
+    <div class="container">
+        <h1><a href="/" class="brand">立委 avatar</a></h1>
+        <form class="form-search" method="get" action="/search">
+            <input type="text" class="input-medium search-query" name="s">
+            <button type="submit" class="btn">Search</button>
+        </form>
+        <p>
+        <% @members.each do |m| %>
+            <a href="/search?s=<%= m %>"><%= m %></a>
+        <% end %>
+        </p>
+    </div>
+</body>
+</html>
+
