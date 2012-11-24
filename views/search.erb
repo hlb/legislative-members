@@ -12,7 +12,9 @@
             padding: 1px;
         }
     </style>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <!--<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>-->
+    <script src="//more.handlino.com/javascripts/moretext-1.2.js"></script>
 </head>
 <body>
     <div class="container">
@@ -23,25 +25,18 @@
         </form>
         <div class="row">
             <div class="span7">
+                <% 10.times do %>
                 <div class="media">
                     <a class="pull-left" href="#">
                         <img class="media-object" src="<%= @avatar[0]['src'] %>">
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading"><%= @name if @name %> <img src="<%= @avatar[1]['src'] if @avatar[1] %>"></h4>
-                        <p>生活最富足是在心靈的滿足，不加糖就苦，最終發現，可以回答曼特寧，買了個越南壺，燒水，終于明白了為什麼越南是賣冰咖啡的了，戒電梯，晚上早早走人，感覺挺傻的。我真的笑了，終身成就獎漏掉鳳飛飛，不管是真是假，吃東西不小心不行啊...金氏紀錄整形最多，我真的笑了，鄧麗君鳳飛飛被消費，加油要快，終身成就獎漏掉鳳飛飛，典型在夙昔啊...今年最大6.1地震，這不是教學，終身成就獎漏掉鳳飛飛，大學副教授，女搭機未保濕，勇士與火箭隊的殷鑑不遠。NBA明星周，台紐政府基金，菊分身乏術，李文忠：若蘇要選</p>
+                        <p><span class="lipsum"></span></p>
                     </div>
                 </div>
                 <hr>
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="<%= @avatar[0]['src'] %>">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading"><%= @name if @name %> <img src="<%= @avatar[1]['src'] if @avatar[1] %>"></h4>
-                        <p>還不賴，還不賴，還不賴，還不賴，還不賴，還不賴，還不賴？昨天我是個孩子，光亮的天真，上山或是下山，雖則我聽說他的名字常在你的口邊，你便蓋沒了你的小耳，我，她們又講你怎樣喜歡拿著一根短棍站在桌上摹仿音樂會的導師，你愛好音樂的故事，最有資格指證或相詮釋，為什麼要到這時候，我只能問！還不賴，還不賴，還不賴，還不賴，還不賴，還不賴，還不賴，還不賴，還不賴，還不賴，還不賴，還不賴，還不賴，還不賴，還不賴，還不賴，還不賴，還不賴，還不賴，還不賴？</p>
-                    </div>
-                </div>
+                <% end %>
             </div>
         </div>
     </div>
